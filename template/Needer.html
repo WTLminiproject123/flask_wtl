@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGO Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ngo_form2.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\web development\Bethany\Bethany\assets\css\style.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+ <header id="header" class="1">
+    <nav>
+        <label class="logo">HelpingHands</label>
+        <ul>
+           <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\wtl.html">HOME</a></li>
+            <!-- <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\forum.html">FORUM</a></li> -->
+            <li><a href="{{url_for('forum')}}">FORUM</a></li>
+            <!-- <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\contactus.html">CONTACT</a></li> -->
+            <li><a href="{{url_for('contact')}}">CONTACT</a></li>
+            <li><button class='loginbtn'onclick="document.getElementById('login-form').style.display='block'" style="width: auto;">LOGIN</button></li>
+            <li><a href="{{url_for('profile')}}">PROFILE</a></li>
+        </ul>
+    </nav>
+    </header>
+
+<div class="row">
+            <div class="small-12 columns" tabindex="0">
+                    <p class="intro-text"><p>
+                    If you are  physical or mental impairment, and. the impairment has a substantial and long-term adverse effect on the person's ability to carry out your  normal day-to-day activities. You deserve equal treatment and we belive you are no less than normal people but you are special adided. therfore , We wish no opportunity or things should come  as obstacles and if you want any kind of help .do register and fill the form.
+                    </p>
+
+	<div class="form-container">
+		<h2>Needeer Registration Form</h2>
+		<form>
+			<label for="name">Full Name:</label>
+			<input id="name" name="name" type="text" data-required="true" placeholder="Ex. Sakshi Mohanlalji Rathi" maxlength="254" />
+
+
+            <label for="disabilityproof" alt="disabilityproof" class="middle text-dynamic " data-required="">disability proof</label>
+                                    <input id="logo" type="file" name="profile_photo_file" title="Profile picture" data-filetype="image" data-keys="profile_photo" data-mandatory="" id="profile_photo_file" class="form-control" accept="image/png, image/jpeg" data-required="false">
+                                    <input type="hidden" name="disabilityproof" value="" id="disabilityproof" class="logo_url">
+                                   
+
+
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+			
+			<label for="phone">Phone Number:</label>
+			<input type="tel" id="phone" name="phone" required>
+			
+			<label for="address">Address:</label>
+			<input type="text" id="address" name="address" required>
+			
+			<label for="city">City:</label>
+			<input type="text" id="city" name="city" required>
+			
+			<label for="state">State:</label>
+			<input type="text" id="state" name="state" required>
+			
+			<label for="zip">Zip Code:</label>
+			<input type="text" id="zip" name="zip" required>
+			
+			<label for="country">Country:</label>
+			<input type="text" id="country" name="country" required>
+			
+			
+            <label for="volunteer_needs" alt="Please describe yourself" class="middle required text-left" data-required="*">Please describe yourself</label>
+            <textarea id="volunteer_needs" name="volunteer_needs" value="" data-required="true" placeholder="Please describe yourself"></textarea>
+                
+                           
+                                    
+                            
+			
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>

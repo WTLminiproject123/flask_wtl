@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGO Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ngo_form2.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\web development\Bethany\Bethany\assets\css\style.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+ <header id="header" class="1">
+    <nav>
+        <label class="logo">HelpingHands</label>
+        <ul>
+           <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\wtl.html">HOME</a></li>
+            <!-- <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\forum.html">FORUM</a></li> -->
+            <li><a href="{{url_for('forum')}}">FORUM</a></li>
+            <!-- <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\contactus.html">CONTACT</a></li> -->
+            <li><a href="{{url_for('contact')}}">CONTACT</a></li>
+            <li><button class='loginbtn'onclick="document.getElementById('login-form').style.display='block'" style="width: auto;">LOGIN</button></li>
+            <li><a href="{{url_for('profile')}}">PROFILE</a></li>
+        </ul>
+    </nav>
+    </header>
+
+<div class="row">
+            <div class="small-12 columns" tabindex="0">
+                    <p class="intro-text"><p>Volunteers are an integral part of achieving an organisation&#39;s social mission. If byou want to contribute and work with us to make this world better place. Do fill the form below.</p>
+
+	<div class="form-container">
+		<h2>Volunteer Registration Form</h2>
+		<form>
+			<label for="name">Full Name:</label>
+			<input id="name" name="name" type="text" data-required="true" placeholder="Ex. Sakshi Mohanlalji Rathi" maxlength="254" />
+
+            <label for="impact_areas_to_work" alt="Primary Impact Area for Volunteer" >Where you want to work?</label>
+                                
+                                
+                                    <div class="input-group-select">
+                                        <select id="impact_areas" name="impact_areas" data-required="true">
+                                             <option value = "" >Select One </option > <option value = "Child Welfare" >Child Welfare </option > <option value = "Civic & Community" >Civic & Community </option > <option value = "Disability" >Disability </option > <option value = "Education" >Education </option > <option value = "Elderly People" >Elderly people </option > <option value = "Environment" >Environment </option > <option value = "Gender" >Gender </option > <option value = "HIV and AIDS" >HIV and AIDS </option > <option value = "Human Rights" >Human rights </option > <option value = "Health" >Health </option > <option value = "Culture and Heritage" >Culture and Heritage </option > <option value = "Animal Welfare" >Animal Welfare </option > <option value = "Other" >Other </option >
+                                        </select>
+                                    </div>
+
+            <label for="idproof" alt="idproof" class="middle text-dynamic " data-required="">ID proof</label>
+                                    <input id="logo" type="file" name="profile_photo_file" title="Profile picture" data-filetype="image" data-keys="profile_photo" data-mandatory="" id="profile_photo_file" class="form-control" accept="image/png, image/jpeg" data-required="false">
+                                    <input type="hidden" name="logo_url" value="" id="logo_url" class="logo_url">
+                                    <p class="help-text space-top">Recommended Size is 113 x 113 px. <span class="remove_image"></span></p>
+                               
+
+
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+			
+			<label for="phone">Phone Number:</label>
+			<input type="tel" id="phone" name="phone" required>
+			
+			<label for="address">Address:</label>
+			<input type="text" id="address" name="address" required>
+			
+			<label for="city">City:</label>
+			<input type="text" id="city" name="city" required>
+			
+			<label for="state">State:</label>
+			<input type="text" id="state" name="state" required>
+			
+			<label for="zip">Zip Code:</label>
+			<input type="text" id="zip" name="zip" required>
+			
+			<label for="country">Country:</label>
+			<input type="text" id="country" name="country" required>
+			
+			
+            <label for="volunteer_needs" alt="Please describe yourself" class="middle required text-left" data-required="*">Please describe yourself</label>
+            <textarea id="volunteer_needs" name="volunteer_needs" value="" data-required="true" placeholder="Please describe yourself"></textarea>
+                
+                           
+                                    
+                            
+			
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>

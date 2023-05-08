@@ -1,0 +1,211 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELPINGHANDS</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/wtl.css') }}">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"> 
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+<script>
+  $(function() {
+    var slides = $(".slideshow img");
+    var i = 0;
+    setInterval(function() {
+      slides.eq(i).fadeOut(1000);
+      i = (i + 1) % slides.length;
+      slides.eq(i).fadeIn(1000);
+    }, 4000);
+  });
+</script>
+
+    
+   
+   
+</head>
+<body>
+  
+    <!-- NAVBAR -->
+    <header id="header" class="1">
+    <nav>
+        <label class="logo">HelpingHands</label>
+        <ul>
+            <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\wtl.html">HOME</a></li>
+            <!-- <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\forum.html">FORUM</a></li> -->
+            <li><a href="{{url_for('forum')}}">FORUM</a></li>
+            <!-- <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\contactus.html">CONTACT</a></li> -->
+            <li><a href="{{url_for('contact')}}">CONTACT</a></li>
+            <li><button class='loginbtn'onclick="document.getElementById('login-form').style.display='block'" style="width: auto;">LOGIN</button></li>
+            <li><a href="{{url_for('profile')}}">PROFILE</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <div id='login-form'class='login-page'>
+        <div class="form-box">
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+            </div>
+            <form id='login' class='input-group-login'>
+                <input type='text'class='input-field'placeholder='Email Id' required >
+        <input type='password'class='input-field'placeholder='Enter Password' required>
+        <input type='checkbox'class='check-box'><span>Remember Password</span>
+        <button type='submit'class='submit-btn'>Log in</button>
+     </form>
+
+
+
+
+
+     <form id='register' class='input-group-register'>
+ 
+          <button class="myButton" onclick="window.location.href='ngo_form2.html'"><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\ngo_form2.html" alt="NGO">NGO</a></button>
+          <button class="myButton" onclick="window.location.href='Volunteer.html'"><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\Volunteer.html" alt="Volunteer">Volunteer</a></button>
+          <button class="myButton" onclick="window.location.href='Needer.html'"><a href="Needer.html" alt="Needer">Needer</a></button>
+         
+         </form>
+        </div>
+
+
+
+
+    </div>
+</div>
+<script>
+    var x=document.getElementById('login');
+    var y=document.getElementById('register');
+    var z=document.getElementById('btn');
+    function register()
+    {
+        x.style.left='-400px';
+        y.style.left='50px';
+        z.style.left='110px';
+    }
+    function login()
+    {
+        x.style.left='50px';
+        y.style.left='450px';
+        z.style.left='0px';
+    }
+</script>
+<script>
+    var modal = document.getElementById('login-form');
+    window.onclick = function(event) 
+    {
+        if (event.target == modal) 
+        {
+            modal.style.display = "none";
+        }
+    }
+</script>
+ 
+
+<section>
+    <div class="banner" >
+        <div class="container" >
+            <div class="banner-content">
+            
+            <h1>Let's change the world !!</h1>
+            <p>A HELPING HAND WOULD BE OFFERED AND WELECOME.<p/>
+                 <a href="#login" button class='loginbtn'onclick="document.getElementById('login-form').style.display='block'" style="width: auto;"> JOIN US</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mid-section">
+<div class="box-container">
+    <h1 class="team-join" >
+      Who can join our team?</h1>
+    <div class="box1">
+      <img src="{{url_for('static', filename='/assets/img/Volunteer.png')}}">
+      <!-- <img src="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\static\assets\img\Volunteer.png" alt="Volunteer"> -->
+    </div>
+    <div class="box2">
+      <img src="{{url_for('static', filename='/assets/img/needer.png')}}">
+      <!-- <img src="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\static\assets\img\needer.png" alt="NEEDER"> -->
+    </div>
+    <div class="box3">
+      <img src="{{url_for('static', filename='/assets/img/ngo.png')}}">
+      <!-- <img src="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\static\assets\img\ngo.png" alt="NGO"> -->
+    </div>
+</div>
+
+<h1 class="team-join" style="text-align: center;padding-bottom: 10px;">What we do?</h1>
+
+<div class="container-causes">
+    
+      <div class="slideshow">
+        <img src="{{url_for('static', filename='/assets/img/slide1.jpg')}}">
+        <img src="{{url_for('static', filename='/assets/img/slide2.jpg')}}">
+        <img src="{{url_for('static', filename='/assets/img/slide3.jpg')}}">
+       
+      </div>
+   
+
+    <div class="text-section">
+
+      <div class="text-section">
+        
+        <p>We Bridge The Gap Between People With Disability Are In Search For Volunteer Devolted To Help Them And 
+          Volunteer With Will Are In Search Of People Needing Help.
+          
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</section> 
+  <!-- footer section -->
+  <footer class="footer">
+    <div class="l-footer">
+    <h1>
+    <img src="https://i.postimg.cc/y62wcLBq/logo.png" alt=""></h1>
+    <p>
+      All volunteers came and registered as a volunteers in HelpingHands may be pooled together and allocated towards assisting, education and social inclusion initiatives across India.</p>
+    </div>
+    <ul class="r-footer">
+    <li>
+      <h2>
+    Social</h2>
+    <ul class="box">
+    <li><a href="#">Facebook</a></li>
+    <li><a href="#">Twitter</a></li>
+    <li><a href="#">Pinterest</a></li>
+    <li><a href="#">linkendin</a></li>
+    </ul>
+    </li>
+ 
+    <li>
+      <h2>
+    Legal</h2>
+    <ul class="box">
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Terms of Use</a></li>
+    <li><a href="#">Contract</a></li>
+    </ul>
+    </li>
+    </ul>
+    <div class="b-footer">
+    <p>
+    All rights reserved by ©PICTSTUDENTS </p>
+    </div>
+    </footer>   
+</body>
+</html>
+
+
+    

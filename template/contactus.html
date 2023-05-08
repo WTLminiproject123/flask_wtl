@@ -1,0 +1,215 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/wtl.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\web development\Bethany\Bethany\assets\css\style.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+ <header id="header" class="1">
+    <nav>
+        <label class="logo">HelpingHands</label>
+        <ul>
+            <li><a href="{{url_for('home')}}">HOME</a></li>
+            <!-- <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\forum.html">FORUM</a></li> -->
+            <li><a href="{{url_for('forum')}}">FORUM</a></li>
+            <!-- <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\contactus.html">CONTACT</a></li> -->
+            <li><a href="{{url_for('contact')}}">CONTACT</a></li>
+            <li><button class='loginbtn'onclick="document.getElementById('login-form').style.display='block'" style="width: auto;">LOGIN</button></li>
+            <li><a href="{{url_for('profile')}}">PROFILE</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <div id='login-form'class='login-page'>
+        <div class="form-box">
+            <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+            </div>
+            <form id='login' class='input-group-login'>
+                <input type='text'class='input-field'placeholder='Email Id' required >
+        <input type='password'class='input-field'placeholder='Enter Password' required>
+        <input type='checkbox'class='check-box'><span>Remember Password</span>
+        <button type='submit'class='submit-btn'>Log in</button>
+     </form>
+     <form id='register' class='input-group-register'>
+         <input type='text'class='input-field'placeholder='First Name' required>
+         <input type='text'class='input-field'placeholder='Last Name ' required>
+         <input type='email'class='input-field'placeholder='Email Id' required>
+         <input type='password'class='input-field'placeholder='Enter Password' required>
+         <input type='password'class='input-field'placeholder='Confirm Password'  required>
+         <input type='checkbox'class='check-box'><span>I agree to the terms and conditions</span>
+                <button type='submit'class='submit-btn'>Register</button>
+         </form>
+        </div>
+    </div>
+</div>
+<script>
+    var x=document.getElementById('login');
+    var y=document.getElementById('register');
+    var z=document.getElementById('btn');
+    function register()
+    {
+        x.style.left='-400px';
+        y.style.left='50px';
+        z.style.left='110px';
+    }
+    function login()
+    {
+        x.style.left='50px';
+        y.style.left='450px';
+        z.style.left='0px';
+    }
+</script>
+<script>
+    var modal = document.getElementById('login-form');
+    window.onclick = function(event) 
+    {
+        if (event.target == modal) 
+        {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            If you fell any glitch or misused of this website,please feel free to let us know!!
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="img/location.png" class="icon" alt="" />
+              <p>S.C.T.R PUNE INSTITUE OF COMPUTER TECHNOLOGY Katraj-411030</p>
+            </div>
+            <div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p>codearmy123@gmail.com</p>
+            </div>
+            <div class="information">
+              <img src="img/phone.png" class="icon" alt="" />
+              <p>9156888038</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/profile.php?id=100086402328324", target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://mobile.twitter.com/Rathi777M",target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/sakshirathi42/", target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/sakshi-rathi-a17093206" , target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          
+          <form name="sentmessage" id="contactform" method="post" action="/contactus.html" >
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <button type="submit" class="btn" id=sendMessagebtn>Send</button>
+            <!-- <input type="submit" value="Send" class="btn" /> -->
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+      <div class="l-footer">
+      <h1>
+      <img src="https://i.postimg.cc/y62wcLBq/logo.png" alt=""></h1>
+      <p>
+        All volunteers came and registered as a volunteers in HelpingHands may be pooled together and allocated towards assisting, education and social inclusion initiatives across India.</p>
+      </div>
+      <ul class="r-footer">
+      <li>
+        <h2>
+      Social</h2>
+      <ul class="box">
+      <li><a href="https://www.facebook.com/profile.php?id=100086402328324">Facebook</a></li>
+      <li><a href="https://mobile.twitter.com/Rathi777M">Twitter</a></li>
+      <li><a href="#">Pinterest</a></li>
+      <li><a href="#https://www.linkedin.com/in/sakshi-rathi-a1709320">linkendin</a></li>
+      </ul>
+      </li>
+   
+      <li>
+        <h2>
+      Legal</h2>
+      <ul class="box">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Contract</a></li>
+      </ul>
+      </li>
+      </ul>
+      <div class="b-footer">
+      <p>
+      All rights reserved by ©PICTSTUDENTS </p>
+      </div>
+      </footer>  
+  </body>
+</html>

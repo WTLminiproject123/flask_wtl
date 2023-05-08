@@ -1,0 +1,15 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_uri": "mysql://root:@localhost/helpinghands",
+    "prod_uri":"mysql://root:@localhost/helpinghands",
+    "fb_url":"https://facebook.com/codingthunder",
+    "tw_url":"https://twitter.com/codingthunder",
+    "gh_url": "https://github.com/codingthunder",
+    "blog_name": "vasudev kutumbakam",
+    "tag_line": "let's make this world one family",
+    "gmail-user":"sakshi.m.rathi777@gmail.com",
+    "gmail-password":"ixulgapjadiqknah"
+  }
+}
