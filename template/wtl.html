@@ -30,9 +30,6 @@
   });
 </script>
 
-    
-   
-   
 </head>
 <body>
   
@@ -46,44 +43,13 @@
             <li><a href="{{url_for('forum')}}">FORUM</a></li>
             <!-- <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\contactus.html">CONTACT</a></li> -->
             <li><a href="{{url_for('contact')}}">CONTACT</a></li>
-            <li><button class='loginbtn'onclick="document.getElementById('login-form').style.display='block'" style="width: auto;">LOGIN</button></li>
+            <li><a href="{{ url_for('logout') }}">LOGOUT</a></li>
             <li><a href="{{url_for('profile')}}">PROFILE</a></li>
         </ul>
     </nav>
     </header>
 
-    <div id='login-form'class='login-page'>
-        <div class="form-box">
-            <div class='button-box'>
-                <div id='btn'></div>
-                <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
-                <button type='button'onclick='register()'class='toggle-btn'>Register</button>
-            </div>
-            <form id='login' class='input-group-login'>
-                <input type='text'class='input-field'placeholder='Email Id' required >
-        <input type='password'class='input-field'placeholder='Enter Password' required>
-        <input type='checkbox'class='check-box'><span>Remember Password</span>
-        <button type='submit'class='submit-btn'>Log in</button>
-     </form>
 
-
-
-
-
-     <form id='register' class='input-group-register'>
- 
-          <button class="myButton" onclick="window.location.href='ngo_form2.html'"><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\ngo_form2.html" alt="NGO">NGO</a></button>
-          <button class="myButton" onclick="window.location.href='Volunteer.html'"><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\Volunteer.html" alt="Volunteer">Volunteer</a></button>
-          <button class="myButton" onclick="window.location.href='Needer.html'"><a href="Needer.html" alt="Needer">Needer</a></button>
-         
-         </form>
-        </div>
-
-
-
-
-    </div>
-</div>
 <script>
     var x=document.getElementById('login');
     var y=document.getElementById('register');

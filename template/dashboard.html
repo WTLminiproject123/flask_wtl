@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style2.css') }}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="xw">
+      <header id="header" class="1">
+        <nav>
+          <label class="logo">HelpingHands</label>
+          <ul>
+            <li><a href="{{url_for('home')}}">HOME</a></li>
+            <!-- <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\forum.html">FORUM</a></li> -->
+            <li><a href="{{url_for('forum')}}">FORUM</a></li>
+            <!-- <li><a href="C:\Users\SAKSHI RATHI\OneDrive\Desktop\proj_wtl_2023\template\contactus.html">CONTACT</a></li> -->
+            <li><a href="{{url_for('contact')}}">CONTACT</a></li>
+            <li><button class='loginbtn'onclick="document.getElementById('login-form').style.display='block'" style="width: auto;">LOGIN</button></li>
+            <li><a href="{{url_for('profile')}}">PROFILE</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  <h1 style="padding-left: 700px; padding-top: 50px;">ADMIN DASHBOARD</h1>
+   <table style="padding-left: 700px; padding-top: 50px;" class="table" >
+    <thead>
+      <tr>
+        <th>Sno</th>
+        <th>title</th>
+        <th>Date</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+     {% for Requests in allreqs %}
+      <tr>
+        <td>{{Requests.sno}}</td>
+        <td>{{Requests.title}}</td>
+        <td>{{Requests.date}}</td>
+        <td><a href="{{ url_for('delete', sno=Requests.sno) }}"><button class="btn btn-primary">DELETE</button></a></td>
+
+      </tr>
+    {% endfor %}
+    </tbody>
+   </table>
+</body>
+</html>

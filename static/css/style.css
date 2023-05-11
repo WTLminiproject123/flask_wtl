@@ -388,6 +388,13 @@ textarea.input {
   font-size: 0.8rem;
 }
 
+.req_post{
+display:flex;
+flex-direction:column;
+widht:300px;
+border:2px solid black;
+block:bo
+}
 .input-container.focus span:before,
 .input-container.focus span:after {
   width: 50%;
@@ -406,6 +413,9 @@ textarea.input {
 .text {
   color: #333;
   margin: 1.5rem 0 2rem 0;
+}
+#req-form{
+display:none;
 }
 
 .information {
@@ -656,3 +666,18 @@ textarea.input {
   .features {
   flex-grow: 2;
   }
+
+
+ .req-btn {
+  align:center
+  background-color: blue;
+  border: 2px solid black;
+  color: #1a70bc;
+  line-height: 3;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+
+}
