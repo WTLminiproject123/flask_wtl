@@ -178,21 +178,6 @@ def delete(sno):
     db.session.commit()
     return redirect(url_for('dashboard'))
 
-# @app.route('/sendemail', methods=['GET', 'POST'])
-# def sentemail(email):
-#     if(request.method=='POST'):
-#         name = request.form.get('name')
-#         email = request.form.get('email')
-#         phone = request.form.get('phone')
-#         message = request.form.get('message')
-#         entry = Volunteer(name=name, phone_no = phone, msg = message, date= datetime.now(),email = email )
-#         db.session.add(entry)
-#         db.session.commit()
-#         msg = Message('Hello', sender='techforgood4@gmail.com', recipients=[email])
-#         msg.body = "Hello Flask message sent from Flask-Mail"
-#         mail.send(msg)
-#     return render_template('forum.html', params=params)
-
 @app.route('/send_email/<string:email>',methods=['GET','POST'])
 def send_email(email):
     name = request.form['name']

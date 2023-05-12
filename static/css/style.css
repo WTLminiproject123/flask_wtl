@@ -565,7 +565,18 @@ display:none;
   .social-media p {
     font-size: 0.8rem;
   }
-
+.reqbutton{
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 804px;
+    border: none;
+    border-radius: 12px;
+    background-color: #1a70bc;
+    color: white;
+}
+.reqbutton a{
+color:white;
+}
   .title {
     font-size: 1.15rem;
   }
